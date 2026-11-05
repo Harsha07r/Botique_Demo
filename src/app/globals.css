@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #fbf6ee;
+  --color-paper: #ffffff;
+  --color-sand: #f1e8d8;
+  --color-line: #e3d6c1;
+  --color-ink: #2a1a1f;
+  --color-muted: #66555a;
+  --color-maroon: #7a1f3d;
+  --color-maroon-deep: #5c1530;
+  --color-gold: #8a6420;
+  --color-wa: #0b7a3b;
+  --color-wa-deep: #086130;
+  --font-display: var(--nf-display), Georgia, serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Noto Sans Telugu", sans-serif;
+}
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --header-h: 56px;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 64px);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer base {
+  /* An implicit auto column can grow past the viewport (aspect-ratio children made the page 451px wide on a
+     375px phone). Single flexible column by default; grid-cols-* utilities still win. */
+  .grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+:focus-visible { outline: 3px solid var(--color-maroon); outline-offset: 2px; border-radius: 4px; }
+
+@layer components {
+/* 44px minimum tap target for anything interactive */
+.tap { min-height: 44px; min-width: 44px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  min-height: 48px; padding: 0 1.25rem; border-radius: 999px; font-weight: 600; font-size: 1rem;
+  text-align: center; cursor: pointer; border: 2px solid transparent; transition: background-color .15s, color .15s;
+}
+.btn-wa { background: var(--color-wa); color: #fff; }
+.btn-wa:active, .btn-wa:hover { background: var(--color-wa-deep); }
+.btn-outline { background: transparent; color: var(--color-maroon); border-color: var(--color-maroon); }
+.btn-outline:active, .btn-outline:hover { background: var(--color-maroon); color: #fff; }
+.btn-maroon { background: var(--color-maroon); color: #fff; }
+.btn-maroon:active, .btn-maroon:hover { background: var(--color-maroon-deep); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: .35rem; min-height: 44px; padding: 0 .95rem;
+  border-radius: 999px; border: 1.5px solid var(--color-line); background: var(--color-paper);
+  font-size: .9rem; font-weight: 500; white-space: nowrap; cursor: pointer; flex: none;
+}
+.chip[aria-pressed="true"], .chip[data-active="true"] { background: var(--color-maroon); border-color: var(--color-maroon); color: #fff; }
+}
+
+.hide-scrollbar { scrollbar-width: none; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
+.rail { display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding-inline: 1rem; scroll-padding-inline: 1rem; }
+.rail > * { scroll-snap-align: start; flex: none; }
+
+/* leave room under the footer for a fixed bottom action bar */
+body:has([data-sticky-bar]) footer { padding-bottom: calc(5rem + var(--safe-bottom)); }
+
+.pad-b-safe { padding-bottom: calc(1rem + var(--safe-bottom)); }
+
+/* Bottom sheet built on <dialog> (focus trap and Esc come free) */
+dialog.sheet {
+  margin: auto 0 0 0; width: 100%; max-width: 100%; max-height: 85dvh; border: 0; padding: 0;
+  border-radius: 1.25rem 1.25rem 0 0; background: var(--color-paper); color: var(--color-ink);
+  animation: sheet-in .22s ease-out;
+}
+dialog.sheet::backdrop { background: rgb(42 26 31 / .5); }
+@keyframes sheet-in { from { transform: translateY(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+dialog.lightbox { margin: 0; padding: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; border: 0; background: #1b1215; }
+dialog.lightbox::backdrop { background: #1b1215; }
+
+@keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.skeleton { background: linear-gradient(90deg, var(--color-sand) 25%, #f8f1e4 50%, var(--color-sand) 75%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .skeleton { animation: none; }
+}

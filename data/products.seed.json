@@ -1,0 +1,92 @@
+[
+  {
+    "sku": "VS-1001", "name": "Kanjivaram Zari Silk Saree", "category": "silk-sarees",
+    "occasions": ["wedding", "festive"], "colourFamily": "green", "colourName": "Peacock Green",
+    "colourOptions": ["Peacock Green", "Temple Maroon"],
+    "fabric": "Pure silk with zari", "weave": "Kanjivaram handloom", "length": 6.3, "blouseIncluded": true,
+    "care": "Dry clean only. Store folded in a muslin cloth and refold every three months.",
+    "description": "A rich peacock-green Kanjivaram with a contrast zari border and a woven gold pallu.",
+    "price": 18500, "availability": "in_stock", "featured": true, "addedOn": "2026-10-28"
+  },
+  {
+    "sku": "VS-1002", "name": "Pochampally Ikat Silk Saree", "category": "silk-sarees",
+    "occasions": ["festive", "office"], "colourFamily": "yellow", "colourName": "Mustard & Indigo",
+    "colourOptions": [],
+    "fabric": "Silk", "weave": "Pochampally double ikat", "length": 5.5, "blouseIncluded": true,
+    "care": "Dry clean for the first wash. Later, gentle hand wash in cold water, dry in shade.",
+    "description": "Geometric double-ikat weave in mustard with an indigo border, light enough for all-day wear.",
+    "price": 6800, "availability": "in_stock", "featured": true, "addedOn": "2026-10-30"
+  },
+  {
+    "sku": "VS-1003", "name": "Uppada Jamdani Silk Saree", "category": "silk-sarees",
+    "occasions": ["wedding", "party"], "colourFamily": "pink", "colourName": "Blush Pink",
+    "colourOptions": ["Blush Pink", "Powder Blue", "Ivory"],
+    "fabric": "Silk-cotton blend", "weave": "Uppada jamdani", "length": 5.5, "blouseIncluded": true,
+    "care": "Dry clean only. Keep away from direct sunlight and perfume.",
+    "description": "Featherlight jamdani buttas on a blush-pink body. Woven to order in about three weeks.",
+    "price": 9200, "availability": "made_to_order", "featured": true, "addedOn": "2026-10-20"
+  },
+  {
+    "sku": "VS-1004", "name": "Venkatagiri Handloom Cotton Saree", "category": "cotton-sarees",
+    "occasions": ["casual", "office", "puja"], "colourFamily": "white", "colourName": "Off-white with Maroon Border",
+    "colourOptions": [],
+    "fabric": "Fine cotton", "weave": "Venkatagiri handloom", "length": 5.5, "blouseIncluded": true,
+    "care": "Hand wash separately in cold water with mild soap. Starch lightly for a crisp drape.",
+    "description": "A soft, breathable everyday handloom with a contrast maroon zari-line border.",
+    "price": 2400, "availability": "in_stock", "featured": false, "addedOn": "2026-10-25"
+  },
+  {
+    "sku": "VS-1005", "name": "Mangalagiri Cotton Saree with Nizam Border", "category": "cotton-sarees",
+    "occasions": ["office", "casual"], "colourFamily": "blue", "colourName": "Navy Blue",
+    "colourOptions": ["Navy Blue", "Bottle Green", "Wine"],
+    "fabric": "Cotton", "weave": "Mangalagiri handloom", "length": 5.5, "blouseIncluded": false,
+    "care": "Machine wash gentle, cold. Wash dark colours separately for the first few washes.",
+    "description": "Crisp Mangalagiri cotton with the classic Nizam border. Pairs with a contrast blouse.",
+    "price": 1800, "availability": "in_stock", "featured": false, "addedOn": "2026-10-22"
+  },
+  {
+    "sku": "VS-1006", "name": "Dharmavaram Pattu Saree", "category": "silk-sarees",
+    "occasions": ["wedding", "puja", "festive"], "colourFamily": "maroon", "colourName": "Temple Maroon & Gold",
+    "colourOptions": [],
+    "fabric": "Pure silk with zari", "weave": "Dharmavaram handloom", "length": 6.0, "blouseIncluded": true,
+    "care": "Dry clean only. Air the saree in shade between wears.",
+    "description": "Broad gold-zari border and a heavy temple-motif pallu on a deep maroon body.",
+    "price": 12800, "availability": "in_stock", "featured": true, "addedOn": "2026-11-01"
+  },
+  {
+    "sku": "VS-1007", "name": "Banarasi Georgette Saree", "category": "designer-sarees",
+    "occasions": ["party", "wedding"], "colourFamily": "black", "colourName": "Black & Gold",
+    "colourOptions": [],
+    "fabric": "Georgette", "weave": "Banarasi", "length": 6.0, "blouseIncluded": true,
+    "care": "Dry clean only. Fold with tissue between the zari layers.",
+    "description": "Flowing georgette with a woven gold jaal. A good evening saree.",
+    "price": 7400, "availability": "sold_out", "featured": false, "addedOn": "2026-09-30"
+  },
+  {
+    "sku": "VS-1008", "name": "Chanderi Silk-Cotton Saree", "category": "designer-sarees",
+    "occasions": ["festive", "office", "party"], "colourFamily": "purple", "colourName": "Lilac",
+    "colourOptions": ["Lilac", "Mint"],
+    "fabric": "Silk-cotton blend", "weave": "Chanderi", "length": 5.5, "blouseIncluded": true,
+    "care": "Dry clean recommended. If washing, use cold water and a mild detergent, no wringing.",
+    "description": "Sheer-textured Chanderi in lilac with tiny gold buttas along the pallu.",
+    "price": 3600, "availability": "in_stock", "featured": false, "addedOn": "2026-11-02"
+  },
+  {
+    "sku": "VS-1009", "name": "Chikankari Cotton Kurta Set", "category": "kurta-sets",
+    "occasions": ["casual", "festive"], "colourFamily": "orange", "colourName": "Peach",
+    "colourOptions": ["Peach", "Mint", "Ivory"],
+    "fabric": "Cotton", "weave": "Hand-embroidered chikankari", "blouseIncluded": false,
+    "care": "Hand wash in cold water. Do not bleach. Iron on reverse.",
+    "description": "Three-piece set: kurta, pant and dupatta. Hand chikankari on the yoke and hem.",
+    "price": 3200, "availability": "in_stock", "featured": false, "addedOn": "2026-11-03"
+  },
+  {
+    "sku": "VS-1010", "name": "Raw Silk Bridal Lehenga Set", "category": "lehengas",
+    "occasions": ["wedding"], "colourFamily": "red", "colourName": "Ruby Red",
+    "colourOptions": ["Ruby Red", "Rani Pink"],
+    "fabric": "Raw silk with zari embroidery", "weave": "Machine-woven with hand finishing", "blouseIncluded": true,
+    "care": "Dry clean only. Store hung, in a breathable garment bag.",
+    "description": "Lehenga, blouse and dupatta set. Fitted to your measurements, ready in about four weeks.",
+    "price": 24500, "availability": "made_to_order", "featured": true, "addedOn": "2026-10-15"
+  }
+]
