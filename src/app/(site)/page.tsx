@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MapFacade } from "@/components/map-facade";
 import { ProductCard } from "@/components/product-card";
 import { getHome, getProducts, getSettings, toCard } from "@/lib/data";
 import { hexOf } from "@/lib/taxonomy";
@@ -86,52 +85,24 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Trust */}
-      <section aria-labelledby="trust" className="mx-auto mt-12 max-w-6xl px-4">
-        <h2 id="trust" className="text-2xl font-semibold">Visit us in Tanuku</h2>
-        <div className="mt-4 grid gap-6 md:grid-cols-2">
-          <div className="grid gap-4">
-            {s.shopPhoto ? (
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-line">
-                <Image src={s.shopPhoto.url} alt={s.shopPhoto.alt} fill sizes="(max-width:768px) 100vw, 560px" quality={70} className="object-cover" placeholder={s.shopPhoto.blur ? "blur" : "empty"} blurDataURL={s.shopPhoto.blur} />
-              </div>
-            ) : (
-              <div className="grid aspect-[4/3] place-items-center rounded-2xl bg-sand p-6 text-center text-sm text-muted ring-1 ring-line">
-                Real shop photo goes here (upload it in Shop details).
-              </div>
-            )}
-            <MapFacade query={s.mapQuery} cid={s.mapCid} />
-          </div>
-          <div className="grid content-start gap-6">
-            <div>
-              <h3 className="text-xl font-semibold">What customers say</h3>
-              {s.googleRating && (
-                <p className="mt-1 text-sm">
-                  <span className="font-semibold">{s.googleRating.score} ★</span> on Google ({s.googleRating.count} reviews){" "}
-                  <a href={s.googleRating.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-maroon underline">See reviews</a>
-                </p>
-              )}
-              <ul className="mt-3 grid gap-3">
-                {s.reviews.map((r) => (
-                  <li key={r.name + r.text} className="rounded-xl bg-paper p-4 ring-1 ring-line">
-                    <Stars n={r.rating} />
-                    <p className="mt-1">“{r.text}”</p>
-                    <p className="mt-2 text-sm text-muted">{r.name}{r.source ? ` · ${r.source}` : ""}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">Delivery</h3>
-              <ul className="mt-2 grid gap-2 text-[0.95rem]">
-                {s.deliveryInfo.map((d) => (
-                  <li key={d} className="flex gap-2"><span aria-hidden className="text-gold">✦</span>{d}</li>
-                ))}
-              </ul>
-              <Link href="/policies" className="tap mt-1 inline-flex items-center text-sm font-semibold text-maroon underline">Delivery and return policy</Link>
-            </div>
-          </div>
-        </div>
+      {/* Testimonials */}
+      <section aria-labelledby="trust" className="mx-auto mt-12 max-w-2xl px-4">
+        <h2 id="trust" className="text-2xl font-semibold">What customers say</h2>
+        {s.googleRating && (
+          <p className="mt-1 text-sm">
+            <span className="font-semibold">{s.googleRating.score} ★</span> on Google ({s.googleRating.count} reviews){" "}
+            <a href={s.googleRating.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-maroon underline">See reviews</a>
+          </p>
+        )}
+        <ul className="mt-3 grid gap-3">
+          {s.reviews.map((r) => (
+            <li key={r.name + r.text} className="rounded-xl bg-paper p-4 ring-1 ring-line">
+              <Stars n={r.rating} />
+              <p className="mt-1">“{r.text}”</p>
+              <p className="mt-2 text-sm text-muted">{r.name}{r.source ? ` · ${r.source}` : ""}</p>
+            </li>
+          ))}
+        </ul>
       </section>
     </>
   );
