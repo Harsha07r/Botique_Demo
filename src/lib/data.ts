@@ -136,11 +136,14 @@ const siteImg = (field: string) => `"${field}": ${field} { "url": asset->url, "b
 export async function getSettings(): Promise<SiteSettings> {
   if (!hasSanity) return defaultSettings;
   const raw = await fetchCms<(Partial<SiteSettings> & { shopPhoto?: RawImage }) | null>(
-    `*[_id == "siteSettings"][0]{ shopName, tagline, whatsappNumber, phone, email, instagram, address, mapQuery, hours, deliveryInfo, reviews, ${siteImg("shopPhoto")} }`,
+    `*[_id == "siteSettings"][0]{ shopName, fullName, mapCid, tagline, whatsappNumber, phone, email, instagram, address, mapQuery, hours, deliveryInfo, reviews, ${siteImg("shopPhoto")} }`,
   );
   if (!raw) return defaultSettings;
   return {
     shopName: raw.shopName || defaultSettings.shopName,
+    fullName: raw.fullName || defaultSettings.fullName,
+    mapCid: raw.mapCid || defaultSettings.mapCid,
+    googleRating: defaultSettings.googleRating,
     tagline: raw.tagline || defaultSettings.tagline,
     whatsappNumber: raw.whatsappNumber || defaultSettings.whatsappNumber,
     phone: raw.phone || defaultSettings.phone,
@@ -168,7 +171,7 @@ export async function getHome(): Promise<HomeContent> {
     heroTitle: raw.heroTitle || defaultHome.heroTitle,
     heroSubtitle: raw.heroSubtitle || defaultHome.heroSubtitle,
     heroCta: raw.heroCta || defaultHome.heroCta,
-    heroImage: toSiteImage(raw.heroImage, raw.heroTitle || "Vastrika"),
+    heroImage: toSiteImage(raw.heroImage, raw.heroTitle || "Sri Vasthra"),
     occasionTiles: raw.occasionTiles?.length
       ? raw.occasionTiles.map((t) => ({ title: t.title, occasion: t.occasion, image: toSiteImage(t.image, t.title) }))
       : defaultHome.occasionTiles,

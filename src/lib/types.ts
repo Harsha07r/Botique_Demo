@@ -63,12 +63,17 @@ export interface SiteImage {
 
 export interface SiteSettings {
   shopName: string;
+  /** Full business name as on Google */
+  fullName?: string;
   tagline: string;
   whatsappNumber: string;
   phone: string;
   email?: string;
   address: string;
   mapQuery: string;
+  /** Google Maps place id: pins the exact listing */
+  mapCid?: string;
+  googleRating?: { score: number; count: number; url: string };
   instagram?: string;
   hours: { day: string; open: string }[];
   deliveryInfo: string[];

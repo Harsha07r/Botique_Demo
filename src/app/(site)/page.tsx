@@ -100,11 +100,17 @@ export default async function HomePage() {
                 Real shop photo goes here (upload it in Shop details).
               </div>
             )}
-            <MapFacade query={s.mapQuery} />
+            <MapFacade query={s.mapQuery} cid={s.mapCid} />
           </div>
           <div className="grid content-start gap-6">
             <div>
               <h3 className="text-xl font-semibold">What customers say</h3>
+              {s.googleRating && (
+                <p className="mt-1 text-sm">
+                  <span className="font-semibold">{s.googleRating.score} ★</span> on Google ({s.googleRating.count} reviews){" "}
+                  <a href={s.googleRating.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-maroon underline">See reviews</a>
+                </p>
+              )}
               <ul className="mt-3 grid gap-3">
                 {s.reviews.map((r) => (
                   <li key={r.name + r.text} className="rounded-xl bg-paper p-4 ring-1 ring-line">

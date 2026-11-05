@@ -6,7 +6,7 @@ export function Footer({ s }: { s: SiteSettings }) {
     <footer className="mt-12 border-t border-line bg-sand">
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:grid-cols-3">
         <div>
-          <p className="font-display text-2xl font-bold text-maroon">{s.shopName}</p>
+          <p className="font-display text-2xl font-bold text-maroon">{s.fullName ?? s.shopName}</p>
           <p className="mt-1 text-sm text-muted">{s.tagline}</p>
           <p className="mt-3 whitespace-pre-line text-sm">{s.address}</p>
         </div>
@@ -22,7 +22,7 @@ export function Footer({ s }: { s: SiteSettings }) {
           {s.instagram && (
             <p><a className="tap inline-flex items-center font-medium underline" href={`https://instagram.com/${s.instagram.replace(/^@/, "")}`} rel="noopener noreferrer">Instagram @{s.instagram.replace(/^@/, "")}</a></p>
           )}
-          <p className="mt-3 text-muted">© {new Date().getFullYear()} {s.shopName}. No online payment: we confirm every order on WhatsApp.</p>
+          <p className="mt-3 text-muted">© {new Date().getFullYear()} {s.fullName ?? s.shopName}. No online payment: we confirm every order on WhatsApp.</p>
         </div>
       </div>
     </footer>

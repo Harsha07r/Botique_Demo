@@ -8,6 +8,7 @@ import { ProductActions } from "@/components/product-actions";
 import { ProductCard } from "@/components/product-card";
 import { getProduct, getProducts, toCard } from "@/lib/data";
 import { AVAILABILITY_LABEL, formatPrice } from "@/lib/format";
+import { BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 import { labelOf, CATEGORIES } from "@/lib/taxonomy";
 
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${p.name} in ${p.colourName} | ${formatPrice(p.price)}`;
   const description = `${p.fabric}, ${p.weave}. ${AVAILABILITY_LABEL[p.availability]}. Enquire on WhatsApp with SKU ${p.sku}.`;
   return {
-    title: { absolute: `${title} | Vastrika` },
+    title: { absolute: `${title} | ${BRAND.short}` },
     description,
     alternates: { canonical: `/p/${p.sku}` },
     // The image comes from opengraph-image.tsx in this folder (name, price and photo on one card)

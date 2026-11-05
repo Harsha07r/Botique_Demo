@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { JsonLd } from "@/components/json-ld";
 import { SiteProvider } from "@/components/site-context";
+import { BRAND } from "@/lib/brand";
 import { getSettings } from "@/lib/data";
 import { siteUrl } from "@/lib/site";
 
@@ -23,7 +24,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
         data={{
           "@context": "https://schema.org",
           "@type": "ClothingStore",
-          name: s.shopName,
+          name: s.fullName ?? s.shopName,
+          geo: { "@type": "GeoCoordinates", latitude: BRAND.lat, longitude: BRAND.lng },
           url: origin,
           address: { "@type": "PostalAddress", streetAddress: s.address, addressLocality: "Tanuku", addressRegion: "Andhra Pradesh", postalCode: "534211", addressCountry: "IN" },
           ...(s.phone ? { telephone: s.phone } : {}),

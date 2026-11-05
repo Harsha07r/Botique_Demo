@@ -25,7 +25,7 @@ export default async function ContactPage() {
       <section className="mt-8" aria-labelledby="find">
         <h2 id="find" className="text-2xl font-semibold">Find the shop</h2>
         <p className="mt-1 whitespace-pre-line">{s.address}</p>
-        <div className="mt-3"><MapFacade query={s.mapQuery} /></div>
+        <div className="mt-3"><MapFacade query={s.mapQuery} cid={s.mapCid} /></div>
       </section>
 
       <section className="mt-8" aria-labelledby="hours">

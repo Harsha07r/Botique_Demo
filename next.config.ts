@@ -5,6 +5,8 @@ const config: NextConfig = {
   // A stray lockfile higher up the OneDrive tree made Next guess the wrong root
   outputFileTracingRoot: path.resolve(__dirname),
   turbopack: { root: path.resolve(__dirname) },
+  // Local test runs build into their own folder so they never clobber a running `next dev`
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   poweredByHeader: false,
   // Most visitors are first-time Instagram arrivals on 4G: inline the ~8 KB of CSS instead of a blocking request
   experimental: { inlineCss: true },
@@ -17,6 +19,7 @@ const config: NextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 30,
     remotePatterns: [
       { protocol: "https", hostname: "cdn.sanity.io" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" }, // the shop's Google profile photo
       { protocol: "https", hostname: "images.unsplash.com" }, // demo stock photos only (src/lib/demo-images.ts)
     ],
   },

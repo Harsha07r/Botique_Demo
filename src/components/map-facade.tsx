@@ -6,16 +6,18 @@ import { useState } from "react";
  * A Google Maps iframe costs about 400 KB of JavaScript. Load it only when asked, and always
  * offer a plain link so the map works without it.
  */
-export function MapFacade({ query }: { query: string }) {
+export function MapFacade({ query, cid }: { query: string; cid?: string }) {
   const [on, setOn] = useState(false);
   const q = encodeURIComponent(query);
+  const embed = cid ? `https://www.google.com/maps?cid=${cid}&output=embed` : `https://www.google.com/maps?q=${q}&output=embed`;
+  const open = cid ? `https://www.google.com/maps?cid=${cid}` : `https://www.google.com/maps/search/?api=1&query=${q}`;
   return (
     <div className="overflow-hidden rounded-2xl ring-1 ring-line">
       <div className="relative aspect-[4/3] w-full bg-sand sm:aspect-[16/9]">
         {on ? (
           <iframe
             title="Shop location on Google Maps"
-            src={`https://www.google.com/maps?q=${q}&output=embed`}
+            src={embed}
             className="absolute inset-0 h-full w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -35,7 +37,7 @@ export function MapFacade({ query }: { query: string }) {
         )}
       </div>
       <a
-        href={`https://www.google.com/maps/search/?api=1&query=${q}`}
+        href={open}
         target="_blank"
         rel="noopener noreferrer"
         className="tap flex items-center justify-center bg-paper text-sm font-semibold text-maroon underline"

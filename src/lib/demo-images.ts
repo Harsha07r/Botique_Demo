@@ -50,7 +50,14 @@ const site = (id: string, alt: string, crop = "fit=crop&w=1440&h=1080"): SiteIma
 
 export const demoSite = {
   hero: () => site("1717585679395-bbe39b5fb6bc", "Folded silk and cotton sarees in bright colours", "fit=crop&w=1440&h=1200"),
-  shop: () => site("1761549924624-6a00e5dfabb7", "Sarees displayed in a shop window"),
+  // The only photo on the shop's own Google Business Profile (a designer blouse; there is no storefront photo yet)
+  shop: (): SiteImage | undefined =>
+    demoImagesOn
+      ? {
+          url: "https://lh3.googleusercontent.com/grass-cs/AABkmLe9QWe3d6ApRQVApkhi7_M8N0tUVni7_zX7XiPl7pZkOXMvYfiS_81JabkN5c5qlAEleL45zEj4mvpb9A_ooxFMTWcSRucDIA3VitQewZEMWZ48Tn1b7tkSCeA90EG7y37kX6ij=w1200-h900-k-no",
+          alt: "Designer blouse from Sri Vasthra Designers Boutique, photo from the shop's Google profile",
+        }
+      : undefined,
   about: () => site("1773218373348-34db6bb11662", "Handloom textiles hanging on display", "fit=crop&w=1200&h=900"),
   tile: (occasion: string) => {
     const id = {

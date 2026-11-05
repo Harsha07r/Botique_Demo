@@ -6,6 +6,7 @@ const env = {
   NEXT_PUBLIC_SITE_URL: `http://localhost:${PORT}`,
   NEXT_PUBLIC_SANITY_PROJECT_ID: "", // tests run on data/products.seed.json
   NEXT_PUBLIC_DEMO_IMAGES: "off", // no third-party image host in tests
+  ...(process.env.CI ? {} : { NEXT_DIST_DIR: ".next-test" }),
 };
 
 export default defineConfig({

@@ -26,8 +26,8 @@ export default async function Image({ params }: { params: Promise<{ sku: string 
           )}
         </div>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "0 56px", flex: 1, color: "#2a1a1f" }}>
-          <div style={{ fontSize: 30, color: "#7a1f3d", fontWeight: 700, letterSpacing: 4 }}>{"VASTRIKA · TANUKU"}</div>
-          <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.1, marginTop: 24 }}>{p?.name ?? "Vastrika"}</div>
+          <div style={{ fontSize: 30, color: "#7a1f3d", fontWeight: 700, letterSpacing: 4 }}>{"SRI VASTHRA · TANUKU"}</div>
+          <div style={{ fontSize: 58, fontWeight: 700, lineHeight: 1.1, marginTop: 24 }}>{p?.name ?? "Sri Vasthra"}</div>
           {p && <div style={{ fontSize: 32, marginTop: 14, color: "#66555a" }}>{p.colourName}</div>}
           {p && <div style={{ fontSize: 64, fontWeight: 700, marginTop: 28, color: "#7a1f3d" }}>{formatPrice(p.price)}</div>}
           {p && <div style={{ fontSize: 28, marginTop: 24, color: "#0b7a3b", fontWeight: 600 }}>{`Enquire on WhatsApp · SKU ${p.sku}`}</div>}

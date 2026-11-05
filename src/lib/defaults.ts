@@ -6,22 +6,26 @@ import type { HomeContent, PageContent, SiteSettings } from "./types";
  * (and when Sanity is not configured, e.g. local dev and CI).
  */
 export const defaultSettings: SiteSettings = {
-  shopName: "Vastrika",
-  tagline: "Sarees and ethnic wear from Tanuku",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "",
-  phone: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ? `+${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}` : "",
-  address: "Tanuku, West Godavari District, Andhra Pradesh 534211",
-  mapQuery: "Tanuku, Andhra Pradesh 534211",
-  instagram: "",
+  shopName: "Sri Vasthra",
+  fullName: "Sri Vasthra Designers Boutique",
+  tagline: "Designer sarees and ethnic wear in Tanuku",
+  // number from the shop's Google profile (Instagram bio lists it for WhatsApp)
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919949255429",
+  phone: "+91 99492 55429",
+  address: "Venkatarayapuram, Tanuku, Andhra Pradesh 534211",
+  mapQuery: "Sri Vasthra Designers Boutique, Venkatarayapuram, Tanuku, Andhra Pradesh 534211",
+  mapCid: "6640108360976342029",
+  googleRating: { score: 4.9, count: 53, url: "https://www.google.com/maps?cid=6640108360976342029" },
+  instagram: "vasthra_designers_tanuku",
   shopPhoto: demoSite.shop(),
   hours: [
-    { day: "Monday", open: "10:00 am – 8:30 pm" },
-    { day: "Tuesday", open: "10:00 am – 8:30 pm" },
-    { day: "Wednesday", open: "10:00 am – 8:30 pm" },
-    { day: "Thursday", open: "10:00 am – 8:30 pm" },
-    { day: "Friday", open: "10:00 am – 8:30 pm" },
-    { day: "Saturday", open: "10:00 am – 8:30 pm" },
-    { day: "Sunday", open: "11:00 am – 6:00 pm" },
+    { day: "Monday", open: "9:45 am – 9:00 pm" },
+    { day: "Tuesday", open: "9:45 am – 9:00 pm" },
+    { day: "Wednesday", open: "9:45 am – 9:00 pm" },
+    { day: "Thursday", open: "9:45 am – 9:00 pm" },
+    { day: "Friday", open: "9:45 am – 9:00 pm" },
+    { day: "Saturday", open: "9:45 am – 9:00 pm" },
+    { day: "Sunday", open: "9:45 am – 9:00 pm" },
   ],
   deliveryInfo: [
     "We ship across India by insured courier.",
@@ -29,12 +33,7 @@ export const defaultSettings: SiteSettings = {
     "Order is confirmed on WhatsApp. Payment details are shared there.",
   ],
   reviews: [
-    {
-      name: "Sample review",
-      text: "Replace these with real customer reviews in the CMS (Site settings, Reviews).",
-      rating: 5,
-      source: "Placeholder",
-    },
+    { name: "Customer", text: "High quality sarees", rating: 5, source: "Google reviews" },
   ],
 };
 
@@ -54,7 +53,7 @@ export const defaultHome: HomeContent = {
 };
 
 export const defaultAbout: PageContent = {
-  title: "About Vastrika",
+  title: "About Sri Vasthra",
   intro: "A family-run saree and ethnic-wear shop in Tanuku, Andhra Pradesh.",
   image: demoSite.about(),
   body: [

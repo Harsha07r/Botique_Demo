@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond } from "next/font/google";
+import { BRAND } from "@/lib/brand";
 import { siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -8,9 +9,9 @@ const display = Cormorant_Garamond({ subsets: ["latin"], weight: ["700"], variab
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
-  title: { default: "Vastrika | Sarees and ethnic wear, Tanuku", template: "%s | Vastrika" },
-  description: "Silk and cotton sarees, kurta sets and lehengas from Vastrika, Tanuku, Andhra Pradesh. Enquire on WhatsApp.",
-  openGraph: { type: "website", siteName: "Vastrika", locale: "en_IN" },
+  title: { default: `${BRAND.full} | Sarees and ethnic wear, Tanuku`, template: `%s | ${BRAND.short}` },
+  description: "Silk and cotton sarees, kurta sets and lehengas from Sri Vasthra Designers Boutique, Tanuku, Andhra Pradesh. Enquire on WhatsApp.",
+  openGraph: { type: "website", siteName: BRAND.full, locale: "en_IN" },
   alternates: { canonical: "./" },
 };
 
