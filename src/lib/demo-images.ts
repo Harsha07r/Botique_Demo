@@ -55,7 +55,7 @@ export const demoSite = {
     demoImagesOn
       ? {
           url: "https://lh3.googleusercontent.com/grass-cs/AABkmLe9QWe3d6ApRQVApkhi7_M8N0tUVni7_zX7XiPl7pZkOXMvYfiS_81JabkN5c5qlAEleL45zEj4mvpb9A_ooxFMTWcSRucDIA3VitQewZEMWZ48Tn1b7tkSCeA90EG7y37kX6ij=w1200-h900-k-no",
-          alt: "Designer blouse from Sri Vasthra Designers Boutique, photo from the shop's Google profile",
+          alt: "Designer blouse, photo from the shop's Google profile",
         }
       : undefined,
   about: () => site("1773218373348-34db6bb11662", "Handloom textiles hanging on display", "fit=crop&w=1200&h=900"),

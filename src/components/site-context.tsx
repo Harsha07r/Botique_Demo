@@ -8,7 +8,7 @@ export interface SiteContextValue {
   origin: string;
 }
 
-const Ctx = createContext<SiteContextValue>({ shopName: "Sri Vasthra", whatsappNumber: "", origin: "" });
+const Ctx = createContext<SiteContextValue>({ shopName: "Vastrika", whatsappNumber: "", origin: "" });
 
 export function SiteProvider({ value, children }: { value: SiteContextValue; children: React.ReactNode }) {
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

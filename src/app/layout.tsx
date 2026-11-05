@@ -10,8 +10,9 @@ const display = Cormorant_Garamond({ subsets: ["latin"], weight: ["700"], variab
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl()),
   title: { default: `${BRAND.full} | Sarees and ethnic wear, Tanuku`, template: `%s | ${BRAND.short}` },
-  description: "Silk and cotton sarees, kurta sets and lehengas from Sri Vasthra Designers Boutique, Tanuku, Andhra Pradesh. Enquire on WhatsApp.",
+  description: "Silk and cotton sarees, kurta sets and lehengas from Vastrika, Tanuku, Andhra Pradesh. Enquire on WhatsApp.",
   openGraph: { type: "website", siteName: BRAND.full, locale: "en_IN" },
+  icons: { icon: "/logo.jpg", apple: "/logo.jpg" },
   alternates: { canonical: "./" },
 };
 

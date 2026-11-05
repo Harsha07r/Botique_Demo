@@ -9,8 +9,8 @@ const single = (S: StructureBuilder, id: (typeof SINGLETONS)[number], title: str
   S.listItem().title(title).id(id).child(S.document().schemaType(id).documentId(id).title(title));
 
 export default defineConfig({
-  name: "sri-vasthra",
-  title: "Sri Vasthra",
+  name: "vastrika",
+  title: "Vastrika",
   basePath: "/studio",
   projectId,
   dataset,
@@ -29,7 +29,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
-          .title("Sri Vasthra")
+          .title("Vastrika")
           .items([
             S.documentTypeListItem("product").title("Products"),
             S.divider(),

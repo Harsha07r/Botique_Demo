@@ -1,4 +1,4 @@
-# Sri Vasthra Designers Boutique (site name: Sri Vasthra)
+# Vastrika
 
 Mobile-first boutique site for a saree and ethnic-wear shop in Tanuku, Andhra Pradesh. Visitors mostly arrive
 from Instagram on phones. The goal is a WhatsApp enquiry that already names the exact item. There is no online
@@ -120,7 +120,7 @@ Copy `.env.example` to `.env.local`. **Never commit real values**; `.env*` is gi
 - The WhatsApp message (see `src/lib/whatsapp.ts`):
 
   ```text
-  Hi Sri Vasthra, I'd like to enquire about this:
+  Hi Vastrika, I'd like to enquire about this:
 
   SKU: VS-1001
   Kanjivaram Zari Silk Saree

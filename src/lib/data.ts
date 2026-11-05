@@ -171,7 +171,7 @@ export async function getHome(): Promise<HomeContent> {
     heroTitle: raw.heroTitle || defaultHome.heroTitle,
     heroSubtitle: raw.heroSubtitle || defaultHome.heroSubtitle,
     heroCta: raw.heroCta || defaultHome.heroCta,
-    heroImage: toSiteImage(raw.heroImage, raw.heroTitle || "Sri Vasthra"),
+    heroImage: toSiteImage(raw.heroImage, raw.heroTitle || "Vastrika"),
     occasionTiles: raw.occasionTiles?.length
       ? raw.occasionTiles.map((t) => ({ title: t.title, occasion: t.occasion, image: toSiteImage(t.image, t.title) }))
       : defaultHome.occasionTiles,

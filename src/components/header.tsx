@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useEnquiryList } from "@/lib/enquiry-store";
@@ -20,7 +21,8 @@ export function Header({ shopName }: { shopName: string }) {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-cream/95 backdrop-blur" style={{ paddingTop: "var(--safe-top)" }}>
       <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
-        <Link href="/" className="tap flex items-center font-display text-2xl font-bold tracking-tight text-maroon">
+        <Link href="/" className="tap flex items-center gap-2 font-display text-2xl font-bold tracking-tight text-maroon">
+          <Image src="/logo.jpg" alt="" width={40} height={40} priority className="size-10 rounded-full" />
           {shopName}
         </Link>
         <nav aria-label="Primary" className="flex items-center gap-1">

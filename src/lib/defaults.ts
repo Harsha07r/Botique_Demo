@@ -6,9 +6,8 @@ import type { HomeContent, PageContent, SiteSettings } from "./types";
  * (and when Sanity is not configured, e.g. local dev and CI).
  */
 export const defaultSettings: SiteSettings = {
-  shopName: "Sri Vasthra",
-  fullName: "Sri Vasthra Designers Boutique",
-  tagline: "Designer sarees and ethnic wear in Tanuku",
+  shopName: "Vastrika",
+  tagline: "Elegance in Every Drape",
   // number from the shop's Google profile (Instagram bio lists it for WhatsApp)
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919949255429",
   phone: "+91 99492 55429",
@@ -16,7 +15,7 @@ export const defaultSettings: SiteSettings = {
   mapQuery: "Sri Vasthra Designers Boutique, Venkatarayapuram, Tanuku, Andhra Pradesh 534211",
   mapCid: "6640108360976342029",
   googleRating: { score: 4.9, count: 53, url: "https://www.google.com/maps?cid=6640108360976342029" },
-  instagram: "vasthra_designers_tanuku",
+  instagram: "vastrika_va",
   shopPhoto: demoSite.shop(),
   hours: [
     { day: "Monday", open: "9:45 am – 9:00 pm" },
@@ -53,7 +52,7 @@ export const defaultHome: HomeContent = {
 };
 
 export const defaultAbout: PageContent = {
-  title: "About Sri Vasthra",
+  title: "About Vastrika",
   intro: "A family-run saree and ethnic-wear shop in Tanuku, Andhra Pradesh.",
   image: demoSite.about(),
   body: [

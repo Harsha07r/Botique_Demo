@@ -33,7 +33,7 @@ export const siteSettings = defineType({
   title: "Shop details",
   type: "document",
   fields: [
-    defineField({ name: "shopName", title: "Shop name", type: "string", initialValue: "Sri Vasthra", validation: (R) => R.required() }),
+    defineField({ name: "shopName", title: "Shop name", type: "string", initialValue: "Vastrika", validation: (R) => R.required() }),
     defineField({ name: "tagline", title: "Tagline", type: "string" }),
     defineField({
       name: "whatsappNumber",
@@ -46,7 +46,7 @@ export const siteSettings = defineType({
     defineField({ name: "email", title: "Email", type: "string" }),
     defineField({ name: "instagram", title: "Instagram handle", type: "string", description: "Without @" }),
     defineField({ name: "address", title: "Shop address", type: "text", rows: 3, validation: (R) => R.required() }),
-    defineField({ name: "fullName", title: "Full business name", type: "string", description: "As on Google, e.g. Sri Vasthra Designers Boutique." }),
+    defineField({ name: "fullName", title: "Full business name", type: "string", description: "As on Google, Only if different from the shop name." }),
     defineField({ name: "mapCid", title: "Google Maps place number (cid)", type: "string", description: "Optional. Pins the exact Google listing. It is the number after cid= in the Maps share link." }),
     defineField({ name: "mapQuery", title: "Map search text", type: "string", description: "What Google Maps should search for, e.g. “Vastrika Sarees, Tanuku”." }),
     defineField({
