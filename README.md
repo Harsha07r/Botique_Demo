@@ -56,8 +56,14 @@ npm install
 npm run dev
 ```
 
-With no environment variables the site runs on the 10 sample products in `data/products.seed.json` with drawn
-placeholders instead of photos. That is also what CI and the Playwright tests use.
+With no environment variables the site runs on the 10 sample products in `data/products.seed.json`.
+
+**Demo images:** in that mode the product galleries, hero, occasion tiles, shop photo and About photo are free
+Unsplash stock photos, hot-linked (nothing is committed), chosen by colour in `src/lib/demo-images.ts`. They are
+there so the owner can see the finished look. They are *not* product-only (most show models), and the pallu,
+border, blouse and texture views are zoomed crops of the same photo. Delete `demo-images.ts` once real photos are
+in. Set `NEXT_PUBLIC_DEMO_IMAGES=off` for drawn placeholders instead; CI and the Playwright tests do this so they
+never depend on a third-party host. Demo images switch off automatically when a Sanity project is configured.
 
 ### Environment variables
 

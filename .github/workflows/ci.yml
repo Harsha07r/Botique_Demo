@@ -16,6 +16,7 @@ env:
   # Dummy values so the build and tests run on the bundled sample catalogue. No secrets are used in CI.
   NEXT_PUBLIC_WHATSAPP_NUMBER: "919876500000"
   NEXT_PUBLIC_SITE_URL: "http://localhost:3100"
+  NEXT_PUBLIC_DEMO_IMAGES: "off"
   NEXT_TELEMETRY_DISABLED: "1"
 
 jobs:

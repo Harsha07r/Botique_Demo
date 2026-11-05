@@ -15,7 +15,10 @@ const config: NextConfig = {
     deviceSizes: [360, 414, 480, 640, 828, 1080, 1440],
     imageSizes: [96, 160, 240, 320],
     minimumCacheTTL: 60 * 60 * 24 * 30,
-    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
+    remotePatterns: [
+      { protocol: "https", hostname: "cdn.sanity.io" },
+      { protocol: "https", hostname: "images.unsplash.com" }, // demo stock photos only (src/lib/demo-images.ts)
+    ],
   },
   async headers() {
     return [

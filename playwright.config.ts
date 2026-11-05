@@ -5,6 +5,7 @@ const env = {
   NEXT_PUBLIC_WHATSAPP_NUMBER: "919876500000", // dummy number for tests only
   NEXT_PUBLIC_SITE_URL: `http://localhost:${PORT}`,
   NEXT_PUBLIC_SANITY_PROJECT_ID: "", // tests run on data/products.seed.json
+  NEXT_PUBLIC_DEMO_IMAGES: "off", // no third-party image host in tests
 };
 
 export default defineConfig({

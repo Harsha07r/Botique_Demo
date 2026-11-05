@@ -1,7 +1,7 @@
 # Photos still needed
 
-No photographs exist in this repository: the site shows drawn colour placeholders (labelled "Photo needed")
-until real photos are uploaded in the CMS. Nothing below can be generated or stolen from elsewhere; it has to be
+No real photographs exist in this repository. The demo shows Unsplash stock photos (see README, "Demo images"),
+and drawn "Photo needed" placeholders when those are switched off. Real photos must be uploaded in the CMS. Nothing below can be generated or stolen from elsewhere; it has to be
 shot in the shop.
 
 ## Shooting rules (same for every photo)

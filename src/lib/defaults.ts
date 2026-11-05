@@ -1,3 +1,4 @@
+import { demoSite } from "./demo-images";
 import type { HomeContent, PageContent, SiteSettings } from "./types";
 
 /**
@@ -12,6 +13,7 @@ export const defaultSettings: SiteSettings = {
   address: "Tanuku, West Godavari District, Andhra Pradesh 534211",
   mapQuery: "Tanuku, Andhra Pradesh 534211",
   instagram: "",
+  shopPhoto: demoSite.shop(),
   hours: [
     { day: "Monday", open: "10:00 am – 8:30 pm" },
     { day: "Tuesday", open: "10:00 am – 8:30 pm" },
@@ -40,19 +42,21 @@ export const defaultHome: HomeContent = {
   heroTitle: "Sarees chosen with care, from our shop in Tanuku",
   heroSubtitle: "See the piece. Message us on WhatsApp. We reply with price, availability and delivery.",
   heroCta: "Shop new arrivals",
+  heroImage: demoSite.hero(),
   occasionTiles: [
-    { title: "Wedding", occasion: "wedding" },
-    { title: "Festive", occasion: "festive" },
-    { title: "Party", occasion: "party" },
-    { title: "Puja", occasion: "puja" },
-    { title: "Office", occasion: "office" },
-    { title: "Everyday", occasion: "casual" },
+    { title: "Wedding", occasion: "wedding", image: demoSite.tile("wedding") },
+    { title: "Festive", occasion: "festive", image: demoSite.tile("festive") },
+    { title: "Party", occasion: "party", image: demoSite.tile("party") },
+    { title: "Puja", occasion: "puja", image: demoSite.tile("puja") },
+    { title: "Office", occasion: "office", image: demoSite.tile("office") },
+    { title: "Everyday", occasion: "casual", image: demoSite.tile("casual") },
   ],
 };
 
 export const defaultAbout: PageContent = {
   title: "About Vastrika",
   intro: "A family-run saree and ethnic-wear shop in Tanuku, Andhra Pradesh.",
+  image: demoSite.about(),
   body: [
     "Tell your shop's story here. Who started it, what you stock, and why customers return.",
     "Edit this page in the CMS under Pages, About.",

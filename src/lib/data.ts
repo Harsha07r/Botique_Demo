@@ -1,6 +1,7 @@
 import { createClient } from "next-sanity";
 import seed from "../../data/products.seed.json";
 import { defaultAbout, defaultContact, defaultHome, defaultPolicies, defaultSettings } from "./defaults";
+import { demoProductImage } from "./demo-images";
 import { buildAlt } from "./format";
 import { hasSanity } from "./site";
 import {
@@ -72,11 +73,12 @@ function toProduct(raw: RawProduct): Product {
     if (raw.photos && !p?.url) continue;
     // Seed/demo mode (no photos object at all): show the first five slots as placeholders
     if (!raw.photos && (slot.key === "extra")) continue;
+    const demo = !raw.photos ? demoProductImage(raw.sku, slot.key, raw.colourFamily) : null;
     images.push({
       key: slot.key,
       label: slot.label,
-      url: p?.url ? sized(p.url) : undefined,
-      blur: p?.blur,
+      url: p?.url ? sized(p.url) : demo?.url,
+      blur: p?.blur ?? demo?.blur,
       alt: buildAlt(base, slot.label),
     });
   }
